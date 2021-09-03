@@ -40,6 +40,7 @@
       }
       // Give the parameter a variable name
       var showPortal = getParameterByName("showPortal");
+      var showJobForm = getParameterByName("showJobForm");
 
       $(document).ready(function () {
         // Check if the URL parameter is apples
@@ -47,6 +48,12 @@
           $("#main").show();
         } else {
           $("#comingsoon").show();
+        }
+        
+        if (showJobForm === "true") {
+          $('.show-job-form-contact').show();
+        } else {
+          $('.show-job-form-contact').hide();
         }
       });
     </script>
@@ -239,9 +246,19 @@
       </section>
 
       <section class="contact-area" style="height: 1520px;" id="contact">
-        <div class="container" style="height: 1520px; margin-bottom: 56px">
-          <div class="contact-section">
-           Put the job form here
+        <div class="container show-job-form-contact" style="height: 1520px; margin-bottom: 56px">
+          <div class="contact-section" style="height: 1520px">
+            <iframe
+              style="padding-top: 60px"
+              id="job-form"
+              class="job-form"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+              allowTransparency="true"
+              src="https://dev.development.fleetmatics.com/jobrequests/5ledg75uJIrFYbjWZBAk8Q/embed/request-form/index.html"
+            ></iframe>
           </div>
         </div>
       </section>
