@@ -55,6 +55,16 @@
         } else {
           $('.show-job-form-contact').hide();
         }
+        
+        $('iframe').load(function() {
+          // alert('what the');
+          
+          console.log(document.getElementById('jobForm'),  $(this)[0].contentWindow.document.getElementById('btnSubmitJobRequest'))
+//           $(this).contents('.job-request-submit-button button').on('click', function() {
+//             alert('hum')
+//           })
+        })
+        
       });
     </script>
   </head>
