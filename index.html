@@ -56,17 +56,23 @@
           $('.show-job-form-contact').hide();
         }
         
-        $('iframe').load(function() {
-          // alert('what the');
-          
-          console.log(document.getElementById('jobForm'),  $(this)[0].contentWindow.document.getElementById('btnSubmitJobRequest'))
-//           $(this).contents('.job-request-submit-button button').on('click', function() {
-//             alert('hum')
-//           })
-        })
-        
       });
     </script>
+    <style>
+      @media screen and (max-width: 768px) {
+        .contact-area {
+          height: 2116px !important;
+          .container {
+            height: 2116px !important;
+            
+            .contact-section {
+              height: 2116px !important;
+            }
+          }
+          
+        }
+      }
+    </style>
   </head>
   <body>
     <section id="comingsoon" style="display: none">
